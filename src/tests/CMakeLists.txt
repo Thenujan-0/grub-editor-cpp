@@ -1,0 +1,7 @@
+include_directories(../)
+link_directories(../)
+include(ECMMarkAsTest)
+add_executable(testgetvalue getvalue.cpp ../cli.cpp)
+target_link_libraries(testgetvalue Qt::Test )
+add_test(NAME testgetvalue COMMAND testgetvalue)
+ecm_mark_as_test(testgetvalue)
